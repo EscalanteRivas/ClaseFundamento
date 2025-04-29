@@ -42,5 +42,12 @@ int main(){
     default:
      cout<<"Opcion no valida, Porfavor elija una opcion";
         break;
+    }if(resultado>0){
+        cout<<"El resultado es positivo."<<endl;
+    }else if(resultado<0){
+        cout<<"El resultado es negativo."<<endl;
+    }else{
+        cout<<"El resultado es cero."<<endl;
     }
+    return 0;
 }
