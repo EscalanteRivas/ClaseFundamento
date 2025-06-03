@@ -1,22 +1,27 @@
 #include <iostream>
 using namespace std;
 
-void Celscius(int a);
-int main(){
-    int temperatura;
-    cout << "Ingrese la temperatura: ";
-    cin>>temperatura;
+// Declaración de función
+string temperatura(int Temperatura);
 
-    Celscius (temperatura);
+int main() {
+    int tempera;
+    cout << "Ingrese la temperatura: ";
+    cin >> tempera;
+
+    string mensaje = temperatura(tempera);
+    cout << mensaje << endl;
+
     return 0;
 }
 
-void Celscius(int a){
-    if (a<=15){
-        cout<<"la temperatura es fria, me voy morir"<<endl;
-    }else if (a>15 && a<=25){
-        cout<<"La temperatura es templada, me voy a quedar en casa"<<endl;
-    }else{
-        cout<<"Estoy hot, o es el clima? xd"<<endl;
+// Definición de función
+string temperatura(int Temperatura) {
+    if (Temperatura <= 15) {
+        return "La temperatura es fría, me voy a morir";
+    } else if (Temperatura <= 25) {
+        return "La temperatura es templada, me voy a quedar en casa";
+    } else {
+        return "Estoy hot, ¿o es el clima? xd";
     }
 }
